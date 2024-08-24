@@ -1,0 +1,41 @@
+GET http://localhost:3002/getDetails
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InByYXZlZW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjQ0OTE1MjB9._hwPq2rz14noqCH_1TZyf9tp_1AwOHSyjUslkzUYqAo
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+  "username": "praveen",
+  "password": "praveen123",
+    "role":"admin"
+}
+
+###
+
+POST http://localhost:3002/login
+Content-Type: application/json
+
+{
+    "username":"praveen",
+    "password":"praveen123"
+}
+
+###
+
+POST http://localhost:3002/login
+Content-Type: application/json
+
+{
+    "username":"aditya",
+    "password":"aditya"
+}
+
+###
+
+GET http://localhost:3002/taskDetails?priority=high
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InByYXZlZW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjQ0OTY2NzF9.1mbwpJVXDPCqTpzW7Tee07_GyBDAmHNlm8BlPKCA0Hc
+
+
+###
