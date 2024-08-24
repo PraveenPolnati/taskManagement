@@ -7,7 +7,7 @@ POST http://localhost:3002/register
 Content-Type: application/json
 
 {
-  "username": "praveen",
+  "username": "v",
   "password": "praveen123",
     "role":"admin"
 }
@@ -39,3 +39,5 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InByY
 
 
 ###
+
+GET http://localhost:3002/sample

@@ -5,6 +5,10 @@ const sqlite3 = require('sqlite3');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
+require('dotenv').config();
+const SECRET_KEY = process.env.SECRET_KEY;
+
+
 const app = express();
 app.use(express.json());
 
@@ -12,7 +16,7 @@ const dbpath = path.join(__dirname, "task.db");
 
 let db = null;
 
-const SECRET_KEY = '123';
+// const SECRET_KEY = '123';
 
 const server = async () => {
     try {
@@ -154,5 +158,19 @@ app.get('/getDetails', authenticateToken, async (req, res) => {
         res.json(userlist);
     } catch (error) {
         res.status(500).send(error.message);
+    }
+});
+
+app.get('/sample', async (req, res) => {
+    const query = `SELECT * FROM users;`;
+
+    try {
+        const response = await db.all(query);
+        const userlist = response.map(usersList);
+        // console.log(userlist);
+        res.json(userlist);
+    } catch (error) {
+        res.status(500).send(error.message);
+        // console.log(error.message);
     }
 });
