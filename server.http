@@ -41,3 +41,17 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InByY
 ###
 
 GET http://localhost:3002/sample
+
+###
+
+POST http://localhost:3002/tasks
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InByYXZlZW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjQ1NTgwNjR9.EEEAtLhDQ6Axy1-myWJNGsLCc7zKc4X8qjbzxixsQaQ
+Content-Type: application/json
+
+{
+    "title":"html",
+    "description":"introduction to html",
+    "priority":"high",
+    "status":"pending",
+    "assigned_user":"aditya"
+}
